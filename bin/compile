@@ -67,7 +67,7 @@ source $BIN_DIR/steps/hooks/pre_compile
 
 # Clone the already compiled ffmpeg binaries from github
 X264_BINARY="https://github.com/ultimatelouis/x264-for-heroku.git"
-VENDOR_FOLDER_X264="vendor/x264"
+VENDOR_FOLDER_X264="vendor"
 
 mkdir -p $BUILD_DIR/$VENDOR_FOLDER_X264 &> /dev/null
 git clone $X264_BINARY $BUILD_DIR/$VENDOR_FOLDER_X264 &> /dev/null
@@ -75,7 +75,7 @@ puts-step "Cloning pre-built x264 repository..."
 
 # Clone the already compiled ffmpeg binaries from github
 FFMPEG_BINARY="https://github.com/ultimatelouis/ffmpeg-for-heroku.git"
-VENDOR_FOLDER="vendor/ffmpeg"
+VENDOR_FOLDER="vendor"
 
 mkdir -p $BUILD_DIR/$VENDOR_FOLDER  &> /dev/null
 git clone $FFMPEG_BINARY $BUILD_DIR/$VENDOR_FOLDER  &> /dev/null
