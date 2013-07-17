@@ -74,12 +74,12 @@ git clone $X264_BINARY $BUILD_DIR/$VENDOR_FOLDER_X264 &> /dev/null
 puts-step "Cloning pre-built x264 repository..."
 
 # Clone the already compiled ffmpeg binaries from github
-FFMPEG_BINARY="https://github.com/ultimatelouis/ffmpeg-for-heroku.git"
+FFMPEG_BINARY="https://github.com/ultimatelouis/ffmpeg-heroku.git"
 VENDOR_FOLDER="vendor/ffmpeg"
 
 mkdir -p $BUILD_DIR/$VENDOR_FOLDER  &> /dev/null
 git clone $FFMPEG_BINARY $BUILD_DIR/$VENDOR_FOLDER  &> /dev/null
-puts-step "Cloning pre-built ffmpeg repository..."
+puts-step "Cloning pre-built ffmpeg-heroku repository..."
 
 # If no requirements given, assume `setup.py develop`.
 if [ ! -f requirements.txt ]; then
