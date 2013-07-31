@@ -10,8 +10,10 @@ MANAGE_FILE=${MANAGE_FILE:2}
 cat <<EOF
 ---
 config_vars:
-  PATH: "/usr/local/bin:/usr/bin:/bin:/app/vendor/ffmpeg/bin"
-  LD_LIBRARY_PATH: "/app/.heroku/vendor/lib:/usr/local/lib:/usr/lib:/lib:/app/vendor/lame/lib:/app/vendor/ffmpeg/lib:/app/vendor/x264/lib"
+  #PATH: "/usr/local/bin:/usr/bin:/bin:/app/vendor/ffmpeg/bin"
+  PATH: "/usr/local/bin:/usr/bin:/bin:/app/vendor/ffmpeg/bin:/app/vendor/yasm-1.2/bin:/app/vendor/mp3lame/bin:/app/vendor/x264/bin"
+  #LD_LIBRARY_PATH: "/app/.heroku/vendor/lib:/usr/local/lib:/usr/lib:/lib:/app/vendor/lame/lib:/app/vendor/ffmpeg/lib:/app/vendor/x264/lib"
+  LD_LIBRARY_PATH: "/app/.heroku/vendor/lib:/usr/local/lib:/usr/lib:/lib:/app/vendor/mp3lame/lib:/app/vendor/ffmpeg/lib:/app/vendor/x264/lib:/app/vendor/yasm-1.2/lib"
 
 EOF
 
